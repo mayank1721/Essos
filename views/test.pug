@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Hello world #{title}
+  p Testing the Search Results Page
+  p Search Results for: #{search}
+  table(style="width:100%")
+    tr
+      th Address
+      th city
+      th Zipcode
+      th Price
+      th Sqft
+      th Building Type
+    for listing in results
+      tr(style="text-align:center")
+        td= listing.address
+        td= listing.city
+        td= listing.zipcode
+        td= listing.price
+        td= listing.sqft
+        td= listing.type
